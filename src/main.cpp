@@ -14,7 +14,7 @@ int main() {
   Grid grid = Grid{};
   grid.Print();
 
-  LBlock block = LBlock();
+  TBlock block = TBlock();
 
   // Game Loop
   while (!WindowShouldClose()) {
