@@ -1,5 +1,4 @@
-#include "Blocks.cpp"
-#include <Grid.hpp>
+#include "Game.hpp"
 #include <raylib.h>
 
 const Color darkBlue = {44, 44, 127, 255};
@@ -10,19 +9,15 @@ int main() {
   // Set FPS
   SetTargetFPS(60);
 
-  // Set up Grid Layout
-  Grid grid = Grid{};
-  grid.Print();
-
-  TBlock block = TBlock();
+  // Game Object
+  Game game = Game{};
 
   // Game Loop
   while (!WindowShouldClose()) {
     BeginDrawing();
     ClearBackground(darkBlue);
 
-    grid.Draw();
-    block.Draw();
+    game.Draw();
 
     EndDrawing();
   }
