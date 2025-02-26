@@ -1,9 +1,7 @@
 #include "Game.hpp"
 #include <raylib.h>
 
-const Color darkBlue = { 44, 44, 127, 255 };
-
-// Continue at 1:07:28
+const Color darkBlue = {44, 44, 127, 255};
 
 int main() {
   InitWindow(300, 600, "Raylib Tetris");
@@ -16,6 +14,8 @@ int main() {
 
   // Game Loop
   while (!WindowShouldClose()) {
+    game.HandleInput();
+
     BeginDrawing();
     ClearBackground(darkBlue);
 
